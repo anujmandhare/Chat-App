@@ -9,14 +9,13 @@ const but = document.getElementById("sendButton");
 const typing = document.getElementById("typing");
 
 but.addEventListener("click", () => {
-  console.log("click");
   socket.emit("chat", { name: nameDiv.value, msg: msg.value });
   msg.value = "";
 });
 
 socket.on("chat", (data) => {
   chatView.innerHTML +=
-    "<p><strong style='color:blur'>" +
+    "<p><strong style='color:skyblue'>" +
     data.name +
     "</strong>: " +
     data.msg +
@@ -25,12 +24,10 @@ socket.on("chat", (data) => {
 });
 
 msg.addEventListener("focus", () => {
-  console.log("keypress");
   socket.emit("typing", nameDiv.value + " is typing...");
 });
 
 msg.addEventListener("blur", () => {
-  console.log("blur");
   socket.emit("typing", "");
 });
 

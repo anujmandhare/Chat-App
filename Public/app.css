@@ -2,3 +2,30 @@ div.form-control,
 input.form-control {
   margin-bottom: 3%;
 }
+
+body,
+html {
+  margin-bottom: 0px;
+  height: 100vh;
+}
+
+.containAll {
+  height: 90vh;
+  margin-bottom: 5px;
+}
+
+#chat {
+  height: 70%;
+  max-height: 70%;
+}
+
+#chatView {
+  height: 90%;
+  max-height: 90%;
+  overflow-y: auto;
+}
+
+#typing {
+  font-style: italic;
+  color: grey;
+}

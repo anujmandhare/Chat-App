@@ -3,7 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0,height=device-height "
+    />
     <title>Anuj Chat App</title>
     <script src="/socket.io/socket.io.js"></script>
     <link rel="stylesheet" href="app.css" />
@@ -15,37 +18,17 @@
     />
   </head>
   <body>
-    <h1 class="text-center bg-primary">Welcome To Chatee</h1>
-
-    <div class="container" style="height: 700px">
-      <div class="col-md-2"></div>
-
-      <div
-        id="chatBody"
-        class="col-md-8 container-fluid col"
-        style="height: 60%"
-      >
-        <div
-          id="chat"
-          class="form-control"
-          style="width: 100%; height: 100%; border: 1px solid grey"
-        >
-          <div id="chatView"></div>
-          <div id="typing" style="font-style: italic; color: grey" ;></div>
-        </div>
-        <input type="text" class="form-control" id="name" placeholder="Name" />
-        <input
-          type="text"
-          class="form-control"
-          id="msg"
-          placeholder="Message"
-        />
-        <button id="sendButton" class="btn btn-primary container form-control">
-          Send
-        </button>
+    <h1 class="text-center bg-primary">Welcome To Chat App</h1>
+    <div class="col-md-6 offset-md-3 col-sm-12 containAll">
+      <div id="chat" class="form-control" style="border: 1px solid grey">
+        <div id="chatView"></div>
+        <div id="typing"></div>
       </div>
-
-      <div class="col-md-2"></div>
+      <input type="text" class="form-control" id="name" placeholder="Name" />
+      <input type="text" class="form-control" id="msg" placeholder="Message" />
+      <button id="sendButton" class="btn btn-primary form-control">
+        Send
+      </button>
     </div>
 
     <script src="index.js"></script>

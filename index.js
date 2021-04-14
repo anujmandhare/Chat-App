@@ -15,12 +15,10 @@ io.on("connect", (socket) => {
   console.log("Socket Connection Established", socket.id);
 
   socket.on("chat", (data) => {
-    console.log(data);
     io.sockets.emit("chat", data);
   });
 
   socket.on("typing", (data) => {
-    console.log(data);
     socket.broadcast.emit("typing", data);
   });
 });
